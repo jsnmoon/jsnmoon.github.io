@@ -1,0 +1,25 @@
+{
+  "name": "jsnmoon.github.io",
+  "description": "A simple portfolio",
+  "author": "Jason Moon",
+  "private": true,
+  "scripts": {
+    "build": "snowpack build",
+    "start": "snowpack dev",
+    "deploy": "yarn build && echo 'lunar.haus' > dist/CNAME && gh-pages -d dist"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@snowpack/plugin-optimize": "^0.2.13",
+    "@snowpack/plugin-postcss": "^1.1.0",
+    "cssnano": "^4.1.10",
+    "gh-pages": "^1.2.0",
+    "postcss": "^8.2.8",
+    "postcss-cli": "^8.3.1",
+    "postcss-import": "^14.0.0",
+    "postcss-nested": "^5.0.5",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.2.1",
+    "snowpack": "^3.0.13"
+  }
+}
