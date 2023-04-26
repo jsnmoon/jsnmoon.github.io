@@ -4,7 +4,10 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 body {
-	font-family: Verdana, sans-serif;
+	font-family: Avenir,
+		Helvetica,
+		Arial,
+		sans-serif;
 	margin: auto;
 	padding: 20px;
 	max-width: 65ch;
@@ -27,6 +30,10 @@ b {
 }
 a {
 	color: #3273dc;
+	text-decoration: none;
+}
+a:hover, a:focus {
+	text-decoration: underline;
 }
 nav a {
 	margin-right: 10px;
