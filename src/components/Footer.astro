@@ -1,13 +1,36 @@
 ---
+import { Icon } from 'astro-icon'
 const today = new Date();
 ---
 
 <footer>
-	&copy; {today.getFullYear()} Jason Moon. All rights reserved.
+	<div class="icons" title="Links">
+		<a href="https://linkedin.com/in/jsnmoon" title="LinkedIn" target="_blank" rel="noopener">
+			<Icon pack="simple-icons" name="linkedin" width={24} height={24}/>
+		</a>
+		<a href="https://github.com/jsnmoon" title="GitHub" target="_blank" rel="noopener">
+			<Icon pack="simple-icons" name="github" width={24} height={24}/>
+		</a>
+	</div>
+	<p>&copy; {today.getFullYear()} Jason Moon. All rights reserved.</p>
 </footer>
 <style>
 	footer {
 		padding: 25px;
 		text-align: center;
+	}
+
+	.icons {
+		display: flex;
+		justify-content: center;
+		align-content: center;
+	}
+	a {
+		display: block;
+		text-decoration: none;
+		margin-right: 0.5em;
+	}
+	a:focus, a:hover {
+		text-decoration: none;
 	}
 </style>

@@ -43,10 +43,11 @@ const { title, description, pubDate, updatedDate, heroImage, heroImageAlt }: Pro
 			<article>
 				{heroImage &&
 					<Picture
-						src={heroImage}
+						alt={heroImageAlt ?? ''}
 						aspectRatio="4:3"
+						format="webp"
+						src={heroImage}
 						widths={[720, 1440]}
-						alt={heroImageAlt ?? undefined}
 					/>
 				}
 
