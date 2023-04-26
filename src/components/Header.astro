@@ -1,5 +1,6 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+import { Icon } from 'astro-icon'
 import { SITE_TITLE } from '../consts';
 ---
 
@@ -8,9 +9,19 @@ import { SITE_TITLE } from '../consts';
 		{SITE_TITLE}
 	</h1>
 	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
+		<div class="internal-links">
+			<HeaderLink href="/">Home</HeaderLink>
+			<HeaderLink href="/about">About</HeaderLink>
+			<HeaderLink href="/blog">Blog</HeaderLink>
+		</div>
+		<div class="external-links" title="Links">
+			<a href="https://linkedin.com/in/jsnmoon" title="LinkedIn" target="_blank" rel="noopener">
+				<Icon pack="simple-icons" name="linkedin" width={24} height={24}/>
+			</a>
+			<a href="https://github.com/jsnmoon" title="GitHub" target="_blank" rel="noopener">
+				<Icon pack="simple-icons" name="github" width={24} height={24}/>
+			</a>
+		</div>
 	</nav>
 </header>
 <style>
@@ -19,5 +30,24 @@ import { SITE_TITLE } from '../consts';
 	}
 	h1 {
 		margin: 0.5em 0;
+	}
+
+	nav {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.icons {
+		display: flex;
+		justify-content: center;
+		align-content: center;
+	}
+	.icons a {
+		display: block;
+		text-decoration: none;
+		margin-right: 0.5em;
+	}
+	.icons a:focus, .icons a:hover {
+		text-decoration: none;
 	}
 </style>
