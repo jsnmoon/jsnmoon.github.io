@@ -1,0 +1,81 @@
+---
+import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon'
+import glacierPortrait from '../assets/portrait-glacier.jpg';
+---
+<div class="section about" id="about">
+  <div class="left">
+    <Image class="portrait" src={glacierPortrait} alt="Portrait of Jason Moon in a glacier in New Zealand."/>
+  </div>
+  <div class="right">
+    <h2>About Me</h2>
+    <p>
+      Hi, I'm Jason, a software engineering manager based in Seattle, Washington. I
+      enjoy solving challenging problems, helping my teammates grow, and building
+      great products.
+    </p>
+    <p>
+      I currently lead a team of talented engineers at
+      <a href="https://www.automattic.com">Automattic</a>
+      who are responsible for building and maintaining
+      <a href="https://jetpack.com/stats/">Jetpack Stats</a>, our flagship analytics
+      product for WordPress sites.
+    </p>
+    <p>
+      When I'm not working, I enjoy spending time with my family, playing video
+      games, and spending time outdoors. I'm a certified Wilderness First Responder
+      and am currently planning my first ascent of Mount St. Helens this summer. I'm
+      a first generation immigrant from South Korea and have called several places
+      home, including Orange County, San Francisco, Denver, and now Seattle.
+    </p>
+    <div class="icons" title="Links">
+			<a href="https://linkedin.com/in/jsnmoon" title="LinkedIn" target="_blank" rel="noopener">
+				<Icon pack="simple-icons" name="linkedin" width={24} height={24}/>
+			</a>
+			<a href="https://github.com/jsnmoon" title="GitHub" target="_blank" rel="noopener">
+				<Icon pack="simple-icons" name="github" width={24} height={24}/>
+			</a>
+		</div>
+  </div>
+</div>
+<style>
+  .section {
+    min-height: 90vh;
+
+    background-color: var(--color-offwhite);
+    color: var(--color-navy);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+  }
+
+  h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+
+  .left {
+    max-height: 100vh;
+  }
+  .left img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .right {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+
+  
+	.icons a {
+    color: var(--color-navy);
+		text-decoration: none;
+		margin-right: 0.5em;
+	}
+	.icons a:focus, .icons a:hover {
+		text-decoration: none;
+	}
+</style>

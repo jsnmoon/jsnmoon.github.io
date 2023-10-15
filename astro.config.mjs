@@ -7,6 +7,7 @@ import image from "@astrojs/image";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://lunar.haus',
+  experimental: { assets: true },
   integrations: [mdx(), sitemap(), image({
     serviceEntryPoint: '@astrojs/image/sharp',
   })]

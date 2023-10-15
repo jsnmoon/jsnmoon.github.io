@@ -9,8 +9,8 @@ body {
 		Arial,
 		sans-serif;
 	margin: auto;
-	padding: 20px;
-	max-width: 65ch;
+	padding: 0;
+	max-width: 1080px;
 	text-align: left;
 	background-color: #fff;
 	word-wrap: break-word;

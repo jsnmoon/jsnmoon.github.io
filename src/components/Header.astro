@@ -1,53 +1,45 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { Icon } from 'astro-icon'
-import { SITE_TITLE } from '../consts';
+import HeaderLink from './header-link.astro';
 ---
 
 <header>
-	<h1>
-		{SITE_TITLE}
-	</h1>
 	<nav>
-		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-		</div>
-		<div class="external-links" title="Links">
-			<a href="https://linkedin.com/in/jsnmoon" title="LinkedIn" target="_blank" rel="noopener">
-				<Icon pack="simple-icons" name="linkedin" width={24} height={24}/>
-			</a>
-			<a href="https://github.com/jsnmoon" title="GitHub" target="_blank" rel="noopener">
-				<Icon pack="simple-icons" name="github" width={24} height={24}/>
-			</a>
-		</div>
+		<HeaderLink href="/#welcome">Home</HeaderLink>
+		<HeaderLink href="/#about">About</HeaderLink>
+
+		<img class="logo" src="../ellipse.svg" alt="Logo for the website."/>
+		<HeaderLink class="disabled">Blog</HeaderLink>
+		<HeaderLink class="disabled">Contact</HeaderLink>
 	</nav>
 </header>
 <style>
 	header {
-		margin: 0em 0 2em;
+		display: flex;
+		flex-flow: column;
+		height: var(--navbar-height);
+		justify-content: center;
+		background-color: var(--color-navy);
+		padding-left: 3em;
+		padding-right: 3em;
+		z-index: 1;
+		font-size: 1.5em;
 	}
-	h1 {
-		margin: 0.5em 0;
-	}
-
 	nav {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 	}
 
-	.icons {
-		display: flex;
-		justify-content: center;
-		align-content: center;
+	header a {
+		color: var(--color-white);
 	}
-	.icons a {
-		display: block;
-		text-decoration: none;
-		margin-right: 0.5em;
+
+	.logo {
+		height: 2rem;
+		width: 2rem;
 	}
-	.icons a:focus, .icons a:hover {
-		text-decoration: none;
+
+	.disabled {
+		cursor: not-allowed;
 	}
 </style>
