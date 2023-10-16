@@ -3,7 +3,6 @@ import BaseHead from '../components-2/base-head.astro';
 import Header from '../components-2/header.astro';
 import Footer from '../components-2/footer.astro';
 import FormattedDate from '../components-2/formatted-date.astro';
-import { Picture } from '@astrojs/image/components';
 
 // Override the default Astro props with our own.
 // Original type is from CollectionEntry<'blog'>['data'] from astro:content.
@@ -41,7 +40,7 @@ const { title, description, pubDate, updatedDate, heroImage, heroImageAlt }: Pro
 		<Header />
 		<main>
 			<article>
-				{heroImage &&
+				<!-- {heroImage &&
 					<Picture
 						alt={heroImageAlt ?? ''}
 						aspectRatio="4:3"
@@ -49,7 +48,7 @@ const { title, description, pubDate, updatedDate, heroImage, heroImageAlt }: Pro
 						src={heroImage}
 						widths={[720, 1440]}
 					/>
-				}
+				} -->
 
 				<h2 class="title">{title}</h2>
 				{ pubDate && <FormattedDate date={pubDate} /> }
