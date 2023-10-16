@@ -3,7 +3,7 @@
 
 <div class="section welcome" id="welcome">
   <div class="text-block">
-    <p>Welcome! You've landed on</p>
+    <p>Welcome! <br class="mobile-only"/> You've landed on</p>
     <h1>Lunar Haus</h1>
   </div>
   <!-- TODO: Make moon scrollable -->
@@ -24,14 +24,30 @@
     place-items: center;
     text-align: center;
   }
+
+  .mobile-only {
+    display: none;
+
+    @media screen and (max-width: 768px) {
+      display: initial;
+    }
+  }
   .text-block {
     color: var(--color-cream);
     font-size: 50px;
     font-weight: lighter;
+
+    @media screen and (max-width: 768px) {
+      font-size: 30px;
+    }
   }
   h1 {
     color: var(--color-white);
     font-size: 130px;
     text-transform: uppercase;
+
+    @media screen and (max-width: 768px) {
+      font-size: 60px;
+    }
   }
 </style>

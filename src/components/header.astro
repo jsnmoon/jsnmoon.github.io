@@ -23,6 +23,10 @@ import HeaderLink from './header-link.astro';
 		padding-right: 3em;
 		z-index: 1;
 		font-size: 1.5em;
+
+		@media screen and (max-width: 768px) {
+      display: none;
+    }
 	}
 	nav {
 		display: flex;
