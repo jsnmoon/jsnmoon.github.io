@@ -3,6 +3,24 @@
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
+:root {
+	--navbar-height: 64px;
+	/* Colors: Base */
+	--color-black: #000;
+	--color-white: #fff;
+	/* Colors: Primary */
+	--color-navy: #1F2946;
+	--color-cerulean: #016F86;
+	--color-straw: #E4D27C;
+	/* Colors: Secondary */
+	--color-teal: #3B8F7B;
+	--color-cream: #FFEECA;
+	/* Colors: Accent */
+	--color-mint: #B4D2B9;
+	--color-red: #D81B19;
+	--color-offwhite: #E6E8F0;
+}
+
 body {
 	font-family: Avenir,
 		Helvetica,
